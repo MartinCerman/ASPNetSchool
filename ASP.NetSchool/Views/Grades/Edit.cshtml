@@ -1,0 +1,26 @@
+﻿@using ASP.NetSchool.ViewModels;
+@model GradeViewModel
+<form asp-action="Edit">
+	<div class="mb-3">
+		<label asp-for="StudentId"></label>
+		<select class="form-control" asp-items="ViewBag.Students" asp-for="StudentId">
+		</select>
+	</div>
+	<div class="mb-3">
+		<label asp-for="SubjectId"></label>
+		<select class="form-control" asp-items="ViewBag.Subjects" asp-for="SubjectId">
+		</select>
+	</div>
+	<div class="mb-3">
+		<label asp-for="Topic"></label>
+		<input type="text" placeholder="Topic that was graded" class="form-control" asp-for="Topic"/>
+	</div>
+	<div class="mb-3">
+		<label asp-for="Mark"></label>
+		<input type="number" placeholder="Grade" min="1" max="5" class="form-control" asp-for="Mark"/>
+	</div>
+	<div>
+		<input type="hidden" asp-for="Date" />
+	</div>
+	<input type="submit" class="btn btn-success" value="Save" />
+</form>

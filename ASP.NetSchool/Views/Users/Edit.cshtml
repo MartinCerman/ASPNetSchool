@@ -1,0 +1,22 @@
+﻿@using ASP.NetSchool.ViewModels;
+@model AppUser
+<h4>Edit user</h4>
+<form asp-action="Edit">
+	<div asp-validation-summary="All" class="text-danger"></div>
+	<div class="form-group mb-3">
+		<label asp-for="@Model.Id"></label>
+	</div>
+	<div class="form-group mb-3">
+		<label asp-for="@Model.UserName"></label>
+		<input type="text" class="form-control" asp-for="@Model.UserName" />
+	</div>
+	<div class="form-group mb-3">
+		<label asp-for="@Model.Email"></label>
+		<input type="email" class="form-control" asp-for="@Model.Email" />
+	</div>
+ 	<div class="form-group mb-3">
+		<label for="password">Password</label>
+		<input name="password" type="text" class="form-control"/>
+	</div> 
+	<button type="submit" class="btn btn-success">Save changes</button>
+</form>

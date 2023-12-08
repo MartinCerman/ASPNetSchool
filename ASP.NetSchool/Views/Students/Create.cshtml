@@ -1,0 +1,24 @@
+﻿@model Student
+<form asp-controller="FileUpload" asp-action="Upload" enctype="multipart/form-data">
+	<div class="mb-2">
+		<input type="file" name="file" accept="text/xml"/>
+		<input type="submit" value="Upload" />
+	</div>
+</form>
+<form asp-action="Create">
+	<div class="form-group mb-3">
+		<label asp-for="@Model.FirstName"></label>
+		<input type="text" asp-for="@Model.FirstName" class="form-control" />
+	</div>
+	<div class="form-group mb-3">
+		<label asp-for="@Model.LastName"></label>
+		<input type="text" asp-for="@Model.LastName" class="form-control" />
+	</div>
+	<div class="form-group mb-3">
+		<label asp-for="@Model.DateOfBirth"></label>
+		<input type="date" asp-for="@Model.DateOfBirth" class="form-control" />
+	</div>
+	<div>
+		<input type="submit" class="btn btn-success" value="Create" />
+	</div>
+</form>
